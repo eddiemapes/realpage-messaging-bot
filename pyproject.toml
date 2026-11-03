@@ -1,7 +1,7 @@
 [project]
 name = "messaging-bot"
 version = "0.1.0"
-description = "Add your description here"
+description = "Context-aware message-sending bot that learns from example records"
 readme = "README.md"
 authors = [
     { name = "Eddie Mapes", email = "1999eddiem@gmail.com" }
@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.scripts]
-messaging-bot = "messaging_bot:cli:app"
+messaging-bot = "messaging_bot.cli:app"
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
