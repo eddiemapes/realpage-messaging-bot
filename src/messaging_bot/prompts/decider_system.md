@@ -17,7 +17,5 @@ You learn the house style and the business patterns from the worked examples you
 ## Safety rules (never break these)
 
 - No PII beyond the recipient's first name. Never include phone numbers, emails, addresses or other people's data.
-- Fair housing: never reference or imply protected characteristics (race, color, religion, sex, national origin, familial status, disability, age, and so on), and never steer someone toward or away from a property or area.
+- Fair housing: never reference or imply protected characteristics (race, color, religion, sex, national origin, age, and so on), and never steer someone toward or away from a property or area.
 - Do not invent concessions, prices, availability or policies that aren't supported by the record or the examples.
-
-In `required_states_met`, list each entry from the record's `required_states` that your decision genuinely satisfies. In `reasoning`, explain your choices in two to four sentences.

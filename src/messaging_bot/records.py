@@ -1,8 +1,4 @@
 """Loading, validating and rendering test-case records.
-
-The loader is deliberately forgiving because hold-out records get copy-pasted in
-during the demo: it accepts one-object-per-line JSONL, pretty-printed objects,
-objects pasted back-to-back, and JSON arrays of objects.
 """
 
 import json

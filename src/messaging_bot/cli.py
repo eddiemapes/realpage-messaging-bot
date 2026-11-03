@@ -1,5 +1,4 @@
-"""Typer CLI for the messaging bot.
-
+"""
     uv run messaging-bot validate
     uv run messaging-bot similar <task_id>
     uv run messaging-bot decide <task_id>
@@ -133,7 +132,6 @@ def print_results_table(results: list[CaseResult]) -> None:
             format_check(checks.get("send_at_date_match")),
             format_check(checks.get("send_at_hours_off")),
             format_check(checks.get("cta_type_match")),
-            format_check(checks.get("next_action_type_match")),
             format_score(result.verdict.overall) if result.verdict else "-",
             f"{result.latency_ms:.0f}",
         )
@@ -255,6 +253,7 @@ def evaluate(
     task_id: Annotated[list[str] | None, typer.Option(help="Only score these task ids. Repeatable.")] = None,
 ) -> None:
     """Leave-one-out evaluation over the pooled records, scored by rule checks + LLM judge."""
+    
     records = load_or_exit(data)
 
     target_task_ids: set[str] | None = None

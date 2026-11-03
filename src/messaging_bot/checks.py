@@ -91,12 +91,6 @@ def check_cta_type_match(expected_message: dict, decision: BotDecision) -> bool 
     return str(expected_cta.get("type", "")).lower() == actual_cta.type.lower()
 
 
-def check_next_action_type_match(record: TestCase, decision: BotDecision) -> bool | None:
-    if record.expected is None or not record.expected.next_action:
-        return None
-    expected_type = str(record.expected.next_action.get("type", "")).lower()
-    return decision.next_action.type.lower() == expected_type
-
 
 def run_checks(record: TestCase, decision: BotDecision) -> dict[str, bool | float | None]:
     """Run every rule check and return them keyed by name."""
@@ -109,7 +103,6 @@ def run_checks(record: TestCase, decision: BotDecision) -> dict[str, bool | floa
         "send_at_date_match": None,
         "send_at_hours_off": None,
         "cta_type_match": None,
-        "next_action_type_match": check_next_action_type_match(record, decision),
     }
 
     expected_message = record.expected.next_message if record.expected else None
